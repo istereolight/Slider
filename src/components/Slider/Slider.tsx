@@ -13,9 +13,24 @@ interface iTabContent {
 
 export default function Slider ({ tabItems }: iTabContent) {
   return (
-    <div className="">
-      <div className="sm:block hidden">
-      <Carousel
+    <div className="xl:flex xl:justify-center">
+      <div className="xl:block hidden">
+        <Carousel
+          showArrows={true}
+          showIndicators={true}
+          showThumbs={false}
+          showStatus={false}
+          centerMode={true}
+          centerSlidePercentage={45}
+          width={1300}
+        >
+          {tabItems.map(item => (
+            <Card key={item.id} title={item.title} imgSrc={item.img} />
+          ))}
+        </Carousel>
+      </div>
+      <div className="sm:block xl:hidden hidden">
+        <Carousel
           showArrows={true}
           showIndicators={true}
           showThumbs={false}
@@ -23,9 +38,9 @@ export default function Slider ({ tabItems }: iTabContent) {
           centerMode={true}
           centerSlidePercentage={45}
         >
-        {tabItems.map(item => (
-          <Card key={item.id} title={item.title} imgSrc={item.img} />
-        ))}
+          {tabItems.map(item => (
+            <Card key={item.id} title={item.title} imgSrc={item.img} />
+          ))}
         </Carousel>
       </div>
       <div className="sm:hidden block ml-3">
