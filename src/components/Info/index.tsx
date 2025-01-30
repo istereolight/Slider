@@ -2,7 +2,7 @@ export default function Info () {
 
   return (
     <div>
-      <div className="grid ml-4 pt-1 pb-1 grid-cols-4 border-b-[2px] border-[#E1E1E1] text-2xl sm:text-4xl text-[#A59DFF]">
+      <div className="grid mx-4 py-1 grid-cols-4 border-b-[2px] border-[#E1E1E1] text-2xl sm:text-4xl text-[#A59DFF]">
         <span>
           1.0
         </span>
