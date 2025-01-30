@@ -1,10 +1,12 @@
 import { Header } from "@/components/Header";
+import Info from "@/components/Info";
 import Link from "next/link";
 
 export default function LoginForm () {
   return (
-    <div className="font-neue pl-4 pt-4">
+    <div className="font-neue">
     <Header />
+    <Info />
     <div className="pl-1 pt-5">
       <div className="w-[100px] pt-2">
         <Link href='/'>
